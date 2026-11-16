@@ -1,0 +1,10 @@
+# O .dockerignore é o ".gitignore" do Docker: o que está aqui NÃO entra na imagem no "COPY . ."
+# venv do Windows não serve no Linux do container: lá as bibliotecas vêm do pip install
+venv/
+# cache do Python
+__pycache__/
+*.pyc
+# o SQLite antigo não é mais usado
+db.sqlite3
+# o .env nunca deve ficar gravado dentro de uma imagem
+.env
